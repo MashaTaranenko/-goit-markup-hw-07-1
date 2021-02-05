@@ -1,0 +1,28 @@
+.container {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container-flex {
+  @extend .container;
+  display: flex;
+  align-items: center;
+}
+
+.section__title {
+  margin: 0;
+  font-weight: $bold-font-weight;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $main-dark-color;
+}
