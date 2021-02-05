@@ -12,9 +12,7 @@
 }
 
 .container-flex {
-  @extend .container;
   display: flex;
-  align-items: center;
 }
 
 .section__title {

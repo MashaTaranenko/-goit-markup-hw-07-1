@@ -1,5 +1,5 @@
 .site-nav {
-  display: flex;
+  @extend .container-flex;
 
   &__link {
     position: relative;
@@ -57,7 +57,7 @@
 }
 
 .auth-nav {
-  display: flex;
+  @extend .container-flex;
   margin-left: auto;
 
   &__item:not(:last-child) {
@@ -65,7 +65,7 @@
   }
 
   &__link {
-    display: flex;
+    @extend .container-flex;
     align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;

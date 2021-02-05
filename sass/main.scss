@@ -1,138 +1,15 @@
 @import './utils/modern-normalize';
 @import './base/fonts';
 @import './utils/variables';
+@import './utils/placeholders';
+@import './utils/mixins';
 @import './base/base';
 @import './base/defaults';
 
-@import './components/logo';
-@import './components/header';
-@import './components/header-navigation';
-@import './components/hero';
-@import './components/advantages';
-
-.section--business {
-  padding-top: 0;
-}
-
-.business {
-  display: flex;
-  margin-top: 50px;
-}
-
-.business__item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.business__image {
-  height: 100%;
-}
-
-.business__item {
-  position: relative;
-}
-
-.business__service {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  background-color: rgba(47, 48, 58, 0.8);
-  color: $main-white-color;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.business__name {
-  margin: 0;
-  font-weight: $bold-font-weight;
-  text-transform: uppercase;
-}
-
-.section--team {
-  background: $light-background;
-}
-
-.team {
-  display: flex;
-  margin-top: 50px;
-}
-
-.team__item {
-  width: 270px;
-  background: $main-white-color;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-
-.team__item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.team__image {
-  display: block;
-}
-
-.team__name {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  color: $main-dark-color;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
-.team__profession {
-  margin-top: 0;
-  margin-bottom: 16px;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.social-links__name:not(:last-child) {
-  margin-right: 10px;
-}
-
-.social-links__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: $main-white-color;
-  color: $social-link-color;
-
-  transition-property: color, background-color;
-  transition-duration: $time-animation;
-  transition-timing-function: $timing-function;
-}
-
-.social-links__icon,
-.clients__icon {
-  fill: currentColor;
-}
-
-.social-links__link:hover,
-.social-links__link:focus {
-  background-color: $accent;
-  color: $main-white-color;
-}
+@import './components/studio/main';
 
 .clients {
-  display: flex;
+  @extend .container-flex;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
@@ -148,7 +25,7 @@
 }
 
 .clients__name {
-  display: flex;
+  @extend .container-flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -168,6 +45,10 @@
   border: 1px solid $accent;
 }
 
+.clients__icon {
+  fill: currentColor;
+}
+
 /* Footer */
 
 .footer {
@@ -177,7 +58,7 @@
 }
 
 .footer__container {
-  display: flex;
+  @extend .container-flex;
 }
 
 .adress {
@@ -244,7 +125,7 @@ address {
 /* Button */
 
 .button {
-  display: flex;
+  @extend .container-flex;
   align-items: center;
   justify-content: center;
   margin-left: auto;
@@ -277,16 +158,8 @@ address {
 
 /* Portfolio */
 
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
-
 .nav-portfolio {
-  display: flex;
+  @extend .container-flex;
   justify-content: center;
   margin-bottom: 50px;
 }
@@ -318,7 +191,7 @@ address {
 }
 
 .examples {
-  display: flex;
+  @extend .container-flex;
   flex-wrap: wrap;
   margin: -15px;
 }
@@ -351,7 +224,7 @@ address {
   height: 100%;
   top: 0;
   left: 0;
-  display: flex;
+  @extend .container-flex;
   align-items: center;
   justify-content: center;
   padding: 59px 24px 63px 24px;
@@ -415,7 +288,7 @@ address {
 }
 
 .subscribe__thub {
-  display: flex;
+  @extend .container-flex;
 }
 
 .subscribe__input {
@@ -506,7 +379,7 @@ address {
   position: absolute;
   top: 8px;
   right: 8px;
-  display: flex;
+  @extend .container-flex;
   justify-content: center;
   align-items: center;
   width: 30px;

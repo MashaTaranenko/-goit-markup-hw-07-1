@@ -1,5 +1,9 @@
+.section__title--advantages {
+  @extend %visually-hidden;
+}
+
 .advantages {
-  display: flex;
+  @extend .container-flex;
 
   &__item {
     width: 270px;
