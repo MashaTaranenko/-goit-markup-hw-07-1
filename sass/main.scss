@@ -1,133 +1,18 @@
-@import './utils/modern-normalize';
+@import './utils/main';
 @import './base/fonts';
-@import './utils/variables';
-@import './utils/placeholders';
-@import './utils/mixins';
-@import './base/base';
+@import './base/base-sections';
 @import './base/defaults';
 
-@import './components/studio/main';
-
-.clients {
-  @extend .container-flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.clients__list {
-  width: 170px;
-  height: 90px;
-}
-
-.clients__list:not(:last-child) {
-  margin-right: 30px;
-}
-
-.clients__name {
-  @extend .container-flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  border: 1px solid $social-link-color;
-  color: $social-link-color;
-
-  transition-property: color, border;
-  transition-duration: $time-animation;
-  transition-timing-function: $timing-function;
-}
-
-.clients__name:hover,
-.clients__name:focus {
-  color: $accent;
-  border: 1px solid $accent;
-}
-
-.clients__icon {
-  fill: currentColor;
-}
+@import './components/main';
+@import './layout/main';
 
 /* Footer */
-
-.footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background: $dark-background;
-}
-
-.footer__container {
-  @extend .container-flex;
-}
-
-.adress {
-  margin-right: 70px;
-}
-
-.footer__logo-web {
-  display: inline-block;
-  margin-bottom: 20px;
-  margin-right: 0;
-}
-
-address {
-  margin-bottom: 9px;
-  font-style: normal;
-  line-height: 1.71;
-  color: $main-white-color;
-}
-
-.address__item {
-  line-height: 1.71;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.address__contact:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.join-us {
-  margin-top: 12px;
-}
-
-.footer__join-us {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-weight: $bold-font-weight;
-  line-height: 1.14;
-  text-transform: uppercase;
-  color: $main-white-color;
-}
-
-.join-us__social-links {
-  margin-bottom: 0;
-}
-
-.social-links__item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.social-links__link--bgcolored {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: $main-white-color;
-
-  transition-property: background-color;
-  transition-duration: $time-animation;
-  transition-timing-function: $timing-function;
-}
-
-.social-links__link:hover,
-.social-links__link:focus {
-  background-color: $accent;
-}
 
 /* Button */
 
 .button {
   @extend .container-flex;
-  align-items: center;
-  justify-content: center;
+  @extend %centering;
   margin-left: auto;
   margin-right: auto;
   width: 200px;
@@ -225,8 +110,7 @@ address {
   top: 0;
   left: 0;
   @extend .container-flex;
-  align-items: center;
-  justify-content: center;
+  @extend %centering;
   padding: 59px 24px 63px 24px;
 
   background-color: rgba(33, 150, 243, 0.9);
@@ -380,8 +264,7 @@ address {
   top: 8px;
   right: 8px;
   @extend .container-flex;
-  justify-content: center;
-  align-items: center;
+  @extend %centering;
   width: 30px;
   height: 30px;
   border-radius: 50%;

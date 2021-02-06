@@ -9,10 +9,17 @@
   line-height: 1.19;
 }
 
+.footer__logo-web {
+  @extend .logo-web;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 0;
+}
+
 .logo-studio {
-  color: #000000;
+  @include logo-colorizing(#000000);
 }
 
 .footer__logo-studio {
-  color: $main-white-color;
+  @include logo-colorizing($main-white-color);
 }

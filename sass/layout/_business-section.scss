@@ -29,8 +29,7 @@
     background-color: rgba(47, 48, 58, 0.8);
     color: $main-white-color;
     @extend .container-flex;
-    align-items: center;
-    justify-content: center;
+    @extend %centering;
   }
 
   &__name {
