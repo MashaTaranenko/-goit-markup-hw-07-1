@@ -9,17 +9,16 @@
     padding-bottom: 32px;
     color: $main-dark-color;
 
-    transition-property: color;
-    transition-duration: $time-animation;
-    transition-timing-function: $timing-function;
-  }
-
-  &__link--current {
-    color: $accent;
+    @include animation(color);
   }
 
   &__item {
     position: relative;
+  }
+
+  &__link--current {
+    @extend .site-nav__link;
+    color: $accent;
   }
 
   &__link--current::after {
@@ -49,7 +48,6 @@
 
 .site-nav,
 .auth-nav {
-  list-style: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -71,9 +69,7 @@
     padding-bottom: 32px;
     color: $second-dark-color;
 
-    transition-property: color;
-    transition-duration: $time-animation;
-    transition-timing-function: $timing-function;
+    @include animation(color);
   }
 
   &__link:hover,

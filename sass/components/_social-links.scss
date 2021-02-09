@@ -38,7 +38,7 @@
     fill: $main-white-color;
   }
 
-  .&__link--bgcolored {
+  &__link--bgcolored {
     @extend .social-links__link;
     background-color: rgba(255, 255, 255, 0.1);
     color: $main-white-color;
